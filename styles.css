@@ -50,3 +50,38 @@
  .category-tabs button{border-radius:12px}
  .btn{border-radius:14px}
 }
+
+/* v3 — softer geometric type, cleaner hero and responsive portrait film */
+:root{--display:"Outfit",system-ui,sans-serif}
+.hero h1,.experience h2,.promo h2,.menu-heading h2,.how-header h2,.visit-copy h2,.footer h2,.brand-copy strong,.product-info h3,.menu-category-heading h3,.experience-card-green h3,.image-caption strong,.step h3,.visit-visual-overlay strong,.footer-right span,.drawer-head h2,.checkout-head h2,.product-modal-body h2,.cart-line h4,.product-price,.subtotal strong,.cart-empty strong{font-family:var(--display);letter-spacing:-.065em}
+.hero h1{font-weight:900;letter-spacing:-.078em;line-height:.94;font-size:clamp(75px,8.8vw,139px)}
+.hero h1 em{font-style:normal}
+.experience h2,.menu-heading h2,.how-header h2,.visit-copy h2{line-height:.98;letter-spacing:-.07em}
+.hero-photo{background:#111a0d}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
+.hero-video-fallback{z-index:0}
+.hero-photo.video-playing .hero-video-fallback{opacity:0}
+.hero-video-fallback{transition:opacity .45s ease}
+.hero-shade{z-index:1;pointer-events:none}
+.hero-label,.hero-counter,.hero-vertical{z-index:2}
+.hero-photo .hero-image{background-position:center}
+.hero-photo:hover .hero-video-fallback{transform:none}
+.eyebrow{letter-spacing:2px}
+.hero-label{gap:0}
+.hero-copy .hero-buttons{margin-top:0}
+.hero-photo:after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(4,11,4,.25),transparent 35%)}
+@media(max-width:840px){.hero h1{font-size:clamp(78px,13vw,116px)}.hero-photo{min-height:490px}.hero-video{object-position:center 46%}}
+@media(max-width:600px){
+ .hero-copy{padding-top:43px;padding-bottom:43px;min-height:0}
+ .hero h1{font-size:clamp(64px,14.3vw,92px);letter-spacing:-.075em;line-height:.95}
+ .hero-text{margin:18px 0 22px}
+ .hero-underline{margin-top:24px}
+ .hero-photo{min-height:430px;height:clamp(430px,112vw,570px)}
+ .hero-video{object-fit:cover;object-position:center center}
+ .hero-label{bottom:25px}
+ .hero-vertical{display:none}
+ .experience-card-green h3{font-size:clamp(58px,13vw,78px);letter-spacing:-.07em}
+ .menu-category-heading h3{font-size:clamp(25px,7vw,36px);letter-spacing:-.06em}
+ .product-rail .product-info h3{font-size:21px;letter-spacing:-.04em}
+}
+@media(prefers-reduced-motion:reduce){.hero-video{display:none}.hero-video-fallback{opacity:1!important}}
