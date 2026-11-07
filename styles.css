@@ -85,3 +85,22 @@
  .product-rail .product-info h3{font-size:21px;letter-spacing:-.04em}
 }
 @media(prefers-reduced-motion:reduce){.hero-video{display:none}.hero-video-fallback{opacity:1!important}}
+
+/* v4 — promo glass, rotating dashed orbit, shopping cart icon */
+.promo{background:radial-gradient(circle at 75% 20%,rgba(233,255,203,.19),transparent 37%),linear-gradient(125deg,rgba(55,89,50,.8),rgba(17,33,23,.88));border:1px solid rgba(235,255,216,.25);border-radius:26px;isolation:isolate;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(255,255,255,.06),0 22px 65px rgba(0,0,0,.24);backdrop-filter:blur(26px) saturate(155%);-webkit-backdrop-filter:blur(26px) saturate(155%)}
+.promo:after{background:linear-gradient(90deg,transparent,rgba(27,49,32,.86))}
+.promo-content{color:#f7ffef;text-shadow:0 2px 14px rgba(0,0,0,.15)}
+.promo-overline{color:#d7f0d0}
+.promo h2{color:#f7ffef}
+.promo h2 i{color:#b8ef45}
+.promo-content p{color:#d6e3d2}
+.promo .btn-dark{background:rgba(228,255,212,.12);border:1px solid rgba(235,255,216,.4);color:#f2ffeb}
+.promo .btn-dark:hover{background:rgba(184,239,69,.2)}
+.promo-stamp{border:0;transform:rotate(12deg);color:#f7ffef;display:grid;place-items:center;isolation:isolate}
+.promo-stamp-ring{position:absolute;inset:0;border:2px dashed rgba(240,255,221,.92);border-radius:50%;animation:stamp-orbit 13s linear infinite;z-index:-1}
+.promo-stamp-copy{position:relative;z-index:1;font:900 21px/.9 var(--display);letter-spacing:-.05em;text-align:center}
+@keyframes stamp-orbit{to{transform:rotate(360deg)}}
+.cart-icon{width:22px;height:22px;flex-shrink:0}
+.floating-cart .cart-icon{width:21px;height:21px}
+@media(max-width:600px){.promo{border-radius:20px}.promo:after{background:linear-gradient(0deg,rgba(27,49,32,.94),transparent)}.promo-stamp-copy{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.promo-stamp-ring{animation:none}}
