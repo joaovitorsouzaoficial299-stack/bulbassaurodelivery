@@ -1,7 +1,7 @@
 document.documentElement.classList.add('js');
 const PRODUCTS=[
 {id:'b1',name:'Bulba Original',category:'Hambúrgueres',price:29.90,description:'Blend bovino, queijo, alface e molho da casa.',image:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85',tag:'CLÁSSICO'},
-{id:'b2',name:'Double Impact',category:'Hambúrgueres',price:39.90,description:'Dois hambúrgueres, cheddar em dobro e muito sabor.',image:'https://images.unsplash.com/photo-1553979459-d2229ba7433a?auto=format&fit=crop&w=900&q=85',tag:'DESTAQUE'},
+{id:'b2',name:'Double Impact',category:'Hambúrgueres',price:39.90,description:'Dois hambúrgueres, cheddar em dobro e muito sabor.',image:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85',tag:'DESTAQUE'},
 {id:'b3',name:'Cheddar Attack',category:'Hambúrgueres',price:35.90,description:'Carne grelhada, cheddar cremoso e cebola.',image:'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85',tag:''},
 {id:'b4',name:'Bacon Evolution',category:'Hambúrgueres',price:38.90,description:'Blend bovino, bacon crocante e molho especial.',image:'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85',tag:''},
 {id:'j1',name:'Janta da Casa',category:'Jantas',price:27.90,description:'Prato completo e saboroso para matar a fome.',image:'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85',tag:'DEMO'},
