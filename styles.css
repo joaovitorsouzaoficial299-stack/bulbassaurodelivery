@@ -104,3 +104,68 @@
 .floating-cart .cart-icon{width:21px;height:21px}
 @media(max-width:600px){.promo{border-radius:20px}.promo:after{background:linear-gradient(0deg,rgba(27,49,32,.94),transparent)}.promo-stamp-copy{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.promo-stamp-ring{animation:none}}
+
+/* v5 — prevent mobile overflow, oversized type and clipped hero */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+main,section,header,footer,.section-shell,.hero,.hero-copy,.hero-photo,.experience-heading,.experience-cards,.promo,.promo-content,.menu-heading,.menu-section,.visit-section,.footer-top{min-width:0}
+h1,h2,h3,p{overflow-wrap:normal}
+.hero h1{white-space:normal;max-width:100%;font-size:clamp(58px,8.5vw,128px)}
+.hero h1>span{display:inline}
+.hero-photo{width:100%;max-width:100%;overflow:hidden}
+.hero-video{max-width:100%;object-fit:cover}
+.hero-label{right:15px;max-width:calc(100% - 35px)}
+.hero-label strong{display:block;max-width:100%;overflow-wrap:break-word}
+.ticker{max-width:100%;overflow:hidden;transform:rotate(-.7deg);width:100%}
+.experience-heading h2,.menu-heading h2,.how-header h2,.visit-copy h2,.footer h2{max-width:100%;overflow-wrap:break-word}
+.promo-content{min-width:0}
+@media(max-width:840px){
+ .hero{width:100%;grid-template-columns:minmax(0,1fr)}
+ .hero-copy{min-width:0;max-width:100%}
+ .hero-photo{min-width:0;max-width:100%}
+ .experience-heading{grid-template-columns:minmax(0,1fr)}
+ .experience-heading h2{font-size:clamp(48px,10.7vw,86px);line-height:1.03;letter-spacing:-.075em}
+ .menu-heading h2,.how-header h2,.visit-copy h2{font-size:clamp(52px,10.4vw,88px);line-height:1.02}
+ .footer h2{font-size:clamp(62px,12vw,104px);line-height:.97}
+}
+@media(max-width:600px){
+ .section-shell{padding-left:20px;padding-right:20px}
+ .hero{display:flex;flex-direction:column;overflow:hidden}
+ .hero-copy{width:100%;padding:42px 20px 34px}
+ .hero h1{font-size:clamp(54px,13.1vw,78px);line-height:.99;letter-spacing:-.08em;white-space:normal}
+ .hero h1 em{display:inline}
+ .hero-text{max-width:100%}
+ .hero-photo{width:100%;height:clamp(360px,103vw,510px);min-height:0;flex-shrink:0}
+ .hero-video,.hero-image{width:100%;height:100%;inset:0}
+ .hero-label{left:20px;bottom:24px;right:20px}
+ .hero-label strong{font-size:clamp(17px,5vw,24px);line-height:1.12;letter-spacing:-.03em}
+ .hero-label small{font-size:8px;letter-spacing:1.4px}
+ .hero-counter{right:18px;bottom:10px;font-size:9px}
+ .hero-underline{flex-wrap:wrap}
+ .ticker{height:51px;transform:none}
+ .ticker-track span{font-size:18px}
+ .experience{padding-top:72px}
+ .experience-heading{display:block}
+ .experience-heading .section-kicker{margin-bottom:23px}
+ .experience-heading h2{font-size:clamp(43px,10.5vw,65px);line-height:1.05;letter-spacing:-.075em;word-break:normal;hyphens:none}
+ .experience-heading h2 i{display:inline;overflow-wrap:anywhere}
+ .experience-heading>p{max-width:100%;font-size:13px;line-height:1.7;margin-top:24px}
+ .experience-cards{grid-template-columns:minmax(0,1fr)}
+ .experience-card{width:100%;min-width:0}
+ .promo{width:100%}
+ .promo-content{width:100%;max-width:100%}
+ .promo h2{font-size:clamp(44px,10.5vw,65px);line-height:.99;overflow-wrap:anywhere}
+ .menu-heading h2,.how-header h2,.visit-copy h2{font-size:clamp(47px,11vw,70px);line-height:1.02}
+ .menu-category-heading h3{font-size:clamp(25px,7vw,36px);overflow-wrap:anywhere}
+ .visit-section{grid-template-columns:minmax(0,1fr)}
+ .visit-visual{min-width:0;width:100%}
+ .footer h2{font-size:clamp(62px,13vw,91px)}
+ .footer-top{min-width:0}
+ .product-rail{grid-auto-columns:min(61vw,235px);max-width:calc(100% + 20px)}
+ .product-modal,.checkout-modal{max-width:calc(100vw - 18px)}
+}
+@media(max-width:360px){
+ .hero h1{font-size:clamp(48px,12.7vw,58px)}
+ .hero-buttons .btn{font-size:8px;padding:0 10px}
+ .experience-heading h2{font-size:clamp(38px,10vw,45px)}
+ .hero-label strong{font-size:17px}
+}
