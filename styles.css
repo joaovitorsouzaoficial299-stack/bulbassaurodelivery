@@ -257,3 +257,26 @@ html,body{max-width:100%;overflow-x:clip}
 .promo h2{font-size:clamp(42px,10vw,60px)}
 .menu-heading h2,.how-header h2,.visit-copy h2{font-size:clamp(39px,9.5vw,65px)}
 }
+
+/*
+ * Saro Food is a commercial font by Illushvara.
+ * The licensed webfont is intentionally NOT bundled.
+ * After licensing, upload SaroFood.woff to the repository root.
+ * The fallback below remains active until the asset is present.
+ */
+@font-face{
+  font-family:"Saro Food";
+  src:url("/SaroFood.woff") format("woff");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+:root{--food-display:"Saro Food","Lilita One","Outfit",system-ui,sans-serif}
+.ticker-track span,
+.btn,
+.order-link,
+.category-tabs button,
+.promo-stamp-copy{
+  font-family:var(--food-display);
+  font-weight:400;
+}
